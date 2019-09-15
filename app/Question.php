@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Question extends Model
 {
     //
-    protected $guard=[];
+    protected $fillable=['title', 'content'];
 
     public function user()
     {
-        return $this->belongsTo(App\User::class);
+        return $this->belongsTo(User::class);
     }
 }
